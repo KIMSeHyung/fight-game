@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- red continer div -->
+    <div style="position:relative; display: inline-block;">
+        <!-- smaller container div -->
+        <div style="position: absolute; display: flex; width: 100%; align-items: center; padding: 20px;">
+            <!-- player health -->
+            <div
+                style="position: relative; width: 100%; display: flex; justify-content: flex-end; border:4px solid white;">
+                <div style="background-color: red; height: 30px; width: 100%;"></div>
+                <div id="playerHealth"
+                    style="position: absolute; background: #22c55e; top:0; right: 0; bottom: 0; width: 100%;"></div>
+            </div>
+            <!-- timer -->
+            <div id="timer" style="
+                background-color: black; 
+                height: 60px; 
+                width: 100px; 
+                border-radius: 10px;
+                flex-shrink: 0; 
+                display: flex; 
+                align-items: center;
+                color: white;
+                font-size: 25px; 
+                justify-content: center;">
+                60
+            </div>
+            <!-- enmey health -->
+            <div style="position: relative; width: 100%; border: 4px solid white;">
+                <div style="background-color: red; height: 30px;"></div>
+                <div id="enemyHealth"
+                    style="position: absolute; background: #22c55e; top:0; right: 0; bottom: 0; left: 0;"></div>
+            </div>
+        </div>
+        <div id="displayText" style="
+                position: absolute; 
+                color: white; 
+                font-size: 100px;
+                display: none; 
+                align-items: center; 
+                justify-content: center;
+                top:0;
+                bottom: 0;
+                left: 0;
+                right: 0;">
+            Tie
+        </div>
+        <canvas></canvas>
+        <div>
+            w,a,s,d space - 1p<br>
+            방향키 - 2p
+        </div>
+    </div>
+    <script src="js/utils.js"></script>
+    <script src="js/classes.js"></script>
+    <script src="index.js"></script>
+</body>
+
+</html>
